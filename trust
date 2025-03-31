@@ -1,0 +1,1 @@
+net conf setparm global "passdb backend" "aldprosam:ldapi://%2fvar%2frun%2fslapd-$(hostname-d | sed's/\./-/g; s/.*/\U&/').socket"
