@@ -1,0 +1,17 @@
+ dn: cn=ipa_extdom_extop,cn=plugins,cn=config
+ only:changetype: add
+ only:objectclass: top
+ only:objectclass: nsSlapdPlugin
+ only:objectclass: extensibleObject
+ only:cn: ipa_extdom_extop
+ only:nsslapd-pluginpath: libaldpro_extdom_extop
+ only:nsslapd-plugininitfunc: ipa_extdom_init
+ only:nsslapd-plugintype: extendedop
+ only:nsslapd-pluginenabled: on
+ only:nsslapd-pluginid: ipa_extdom_extop
+ only:nsslapd-pluginversion: 1.0
+ only:nsslapd-pluginvendor: AstraLinux
+ only:nsslapd-plugindescription: Support resolving IDs in trusted domains to
+ →names and back
+ only:nsslapd-plugin-depends-on-type: database
+ only:nsslapd-basedn: $SUFFIX
